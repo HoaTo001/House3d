@@ -48,5 +48,12 @@ public class SmartHomeUtility : MonoBehaviour
             bathroom_camera.enabled = false;
             room_camera.enabled = true;
         }
+        else if (Input.GetKeyDown("5"))
+        {
+            house_camera.enabled = true;
+            kitchen_camera.enabled = false;
+            bathroom_camera.enabled = false;
+            room_camera.enabled = false;
+        }
     }
 }
