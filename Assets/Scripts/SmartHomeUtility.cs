@@ -85,5 +85,31 @@ public class SmartHomeUtility : MonoBehaviour
                 shower_water.Stop();
             }
         }
+
+        if (Input.GetKeyDown("g"))
+        {
+            if(gas_leakage.isStopped)
+            {
+                gas_leakage.Play();
+            }
+
+            else if(gas_leakage.isPlaying)
+            {
+                gas_leakage.Stop();
+            }
+        }
+        if (Input.GetKeyDown("f"))
+        {
+            if(stove_1.isStopped && stove_2.isStopped)
+            {
+                stove_1.Play();
+                stove_2.Play();
+            }
+            else if (stove_1.isPlaying || stove_2.isPlaying)
+            {
+                stove_1.Stop();
+                stove_2.Stop();
+            }
+        }
     }
 }
